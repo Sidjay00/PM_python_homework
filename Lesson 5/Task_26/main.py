@@ -5,17 +5,7 @@
 А = 3; В = 5 -> 243 (3^5)
 А = 2; В = 3 -> 8
 """
+import function_file
 
-def Exp():
-    try:
-        i = 1
-        sq = 0
-        num_a, num_b = map(int, input(f"Введите через пробел числа А и В: ").split())
-        for i in range(num_b):
-            sq = num_a * Exp()
-        # print(sq)
-        print(f"{num_a}^{num_b} -> {sq}")
-    except Exception as e:
-        print(f'Вы ввели не число, перезапустите программу!')
-
-print(Exp())
+num_a, num_b = map(int, input(f"Введите через пробел числа А и В: ").split())
+print(function_file.exp(num_a, num_b))
